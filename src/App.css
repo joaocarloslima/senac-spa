@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  border-radius: 8px;
+}
+
+.card img{
+  border-radius: 8px;
+}
+
+.card .button {
+  background-color: #06F;
+  color: #FFF;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
