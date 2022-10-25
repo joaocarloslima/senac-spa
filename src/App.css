@@ -1,26 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.card{
-  width: 200px;
+header {
   display: flex;
-  flex-direction: column;
-  background-color: #111;
-  border-radius: 8px;
+  align-items: center;
+  background-color: #2d2d2d;
+  width: 100vw;
+  padding: 1rem 0;
 }
 
-.card img{
-  border-radius: 8px;
+h1{
+  margin: 0rem;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 
-.card .button {
-  background-color: #06F;
-  color: #FFF;
-  padding: .5rem 1rem;
-  margin: 1rem;
-  border-radius: 5px;
+main{
+  margin: 2rem;
+}
+
+section.filmes{
+  display: flex;
 }

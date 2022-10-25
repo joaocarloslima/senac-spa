@@ -1,21 +1,32 @@
 import './App.css'
-import { Titulo } from './Titulo'
+import { CardElenco } from './components/CardElenco/CardElenco'
+import { CardFilme } from './components/CardFilme/CardFilme'
+import { Titulo } from './components/Titulo/Titulo'
+import TheatersOutlinedIcon from '@mui/icons-material/TheatersOutlined';
 
 function App() {
 
+  const deadpool = {
+    poster: "https://image.tmdb.org/t/p/w200/tdVPICyJLENwgmZHr8RsOgeWoyP.jpg",
+    titulo: "Deadpool",
+    nota: 8.9
+  }
+
   return (
     <div className="App">
-     <h1>Senac Filmes</h1>
+     <header>
+      <TheatersOutlinedIcon fontSize='large' />
+      <h1>Senac Filmes</h1>
+     </header>
 
      <main>
       <Titulo texto="Filmes em alta" />
 
-      <div className="card">
-        <img src="https://image.tmdb.org/t/p/w200/zduyzcjyahZtP4fGZE6789h04IM.jpg" alt="" />
-        <span>Rogai por nós</span>
-        <span>8.9</span>
-        <a className="button" href="#">detalhes</a>
-      </div>
+        <section className="filmes">
+          <CardFilme filme={deadpool} />
+          <CardFilme filme={deadpool} />
+        </section>
+
 
       <Titulo texto="Séries em alta" />
 

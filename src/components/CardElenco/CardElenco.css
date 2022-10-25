@@ -1,0 +1,25 @@
+.cardElenco{
+    margin-top: 70px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #111;
+    border-radius: 4px;
+    position: relative;
+}
+
+.cardElenco img{
+    border: solid 4px #fff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    top: -60px;
+    position: absolute;
+}
+
+.ator{
+    font-weight: bold;
+}
