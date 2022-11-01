@@ -7,6 +7,7 @@
     background-color: #111;
     border-radius: 8px;
     margin: 1rem;
+    position: relative;
   }
   
   .card img{
@@ -19,5 +20,12 @@
     padding: .5rem 1rem;
     margin: 1rem;
     border-radius: 5px;
+  }
+
+  .favorite{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
   

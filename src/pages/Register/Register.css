@@ -1,0 +1,14 @@
+.card {
+    width: 400px;
+    padding: 2rem;
+    margin: auto;
+}
+
+.card form{
+    display: flex;
+    flex-direction: column;
+}
+
+.error{
+    color: #F06;
+}

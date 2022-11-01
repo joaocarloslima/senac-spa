@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './CardFilme.css'
-//import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
-//import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
+import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 
 export function CardFilme({filme}){
     const [favorito, setFavorito] = useState(false)
@@ -12,12 +12,14 @@ export function CardFilme({filme}){
 
     return (
         <div className="card">
+            {favorito? 
+                <BookmarkBorderOutlinedIcon className="favorite" onClick={favoritar}/> : 
+                <BookmarkOutlinedIcon className="favorite" onClick={favoritar}/>
+            }
             <img src={filme.poster} alt="" />
             <span>{filme.titulo}</span>
             <span>{filme.nota}</span>
             <a className="button" href="#">detalhes</a>
-            {favorito ? <span>favoritado</span> : <span></span>}
-            <button onClick={favoritar}>favoritar</button>
         </div>
     )
 }

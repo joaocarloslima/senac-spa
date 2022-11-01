@@ -23,3 +23,7 @@
 .ator{
     font-weight: bold;
 }
+
+.like{
+    cursor: pointer;
+}
