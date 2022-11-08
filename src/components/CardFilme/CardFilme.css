@@ -1,20 +1,29 @@
-.card{
+.card-filme{
     width: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #111;
     border-radius: 8px;
     margin: 1rem;
     position: relative;
+    padding: 0;
   }
   
-  .card img{
+  .card-filme img{
     border-radius: 8px;
   }
+
+  .card-filme span{
+    text-align: center;
+  }
+
+  .card-filme span:nth-child(4){
+    opacity: .5;
+  }
   
-  .card .button {
+  .card-filme .button {
     background-color: #06F;
     color: #FFF;
     padding: .5rem 1rem;

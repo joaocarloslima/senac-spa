@@ -2,22 +2,27 @@ import './Home.css'
 import { CardElenco } from '../../components/CardElenco/CardElenco'
 import { CardFilme } from '../../components/CardFilme/CardFilme'
 import { Titulo } from '../../components/Titulo/Titulo'
+import { CircularProgress } from '@mui/material';
+import useAxios from 'axios-hooks'
 
 import TheatersOutlinedIcon from '@mui/icons-material/TheatersOutlined';
 
 function Home() {
+  const url = "https://api.themoviedb.org/3/trending/movie/week?api_key=1e922667481ab207d642450b0efb461e"
+  const [ {data, loading, error}] = useAxios(url);
 
-  const deadpool = {
-    poster: "https://image.tmdb.org/t/p/w200/gkbGBlmjxQK9ZDQgAXmfG877DM4.jpg",
-    titulo: "America Horror Story",
-    nota: 8.9
+  if(loading){
+    return (
+      <>
+        <CircularProgress />
+        <p>carregando...</p>
+      </>
+    )
   }
 
-  const ator = {
-    foto: "https://www.themoviedb.org/t/p/w138_and_h175_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg",
-    nome: "Ryan Reynolds",
-    personagem: "Dead Pool"
-  }
+  if(error) return (<p>Um erro aconteceu - {error.message}</p>)
+
+  const filmes = data.results
 
   return (
     <div className="App">
@@ -30,15 +35,14 @@ function Home() {
       <Titulo texto="Filmes em alta" />
 
         <section className="filmes">
-          <CardFilme filme={deadpool} />
-          <CardFilme filme={deadpool} />
+          { filmes.map(filme => <CardFilme filme={filme} />) }
         </section>
 
 
       <Titulo texto="Séries em alta" />
 
 
-      <CardElenco ator={ator} />
+     
 
      </main>
     </div>
