@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Register.css'
 
 export function Register(){
@@ -6,9 +7,12 @@ export function Register(){
     const [ senha, setSenha ] = useState("")
     const [ erro, setErro ] = useState(false)
 
+    const navigate = useNavigate()
+
     function handleSubmit(e){
         e.preventDefault()
         console.log("Cadastrar usuário", nome, senha)
+        navigate('/')
     }
 
     function handleSenha(e){
